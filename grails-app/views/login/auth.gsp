@@ -8,7 +8,6 @@
 
     <link href="${resource(dir: 'dashboard/css/bootstrap', file: 'bootstrap.min.css')}" rel="stylesheet">
     <link href="${resource(dir: 'dashboard/css/bootstrap', file: 'bootstrap_custom.css')}" rel="stylesheet">
-    <link href="${resource(dir: 'hover-effects', file: 'style_common.css')}" rel="stylesheet">
     <r:require module="jquerybrowserfix"/>
     <link rel="stylesheet" href="${resource(dir: 'sky_forms/css', file: 'sky-forms.css')}">
     <!--[if lt IE 9]>

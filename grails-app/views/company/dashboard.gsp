@@ -497,12 +497,7 @@
                 </div>
             </div><!-- End contentwrapper -->
         </div><!-- End #content -->
-    <r:script>
-    $(document).ready(function(){
-        var vague = $("#mainDashboard").Vague({intensity:7});
-        vague.blur();
-    });
-    </r:script>
+
 
 
 

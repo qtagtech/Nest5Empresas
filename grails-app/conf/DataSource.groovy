@@ -17,27 +17,40 @@ environments {
             driverClassName = "org.postgresql.Driver"
             dialect = "org.hibernate.dialect.PostgreSQLDialect"
             url = "jdbc:postgresql://localhost:5432/newNest5DB3"
-            // url = "jdbc:postgresql://192.168.1.76:5432/newNest5DB2" //oficina
-            //url = "jdbc:postgresql://192.168.11.102:5432/newNest5DB2" //casa
             username = "postgres"
             password = "qtagtech"
         }
     }
-    test {
+    staging {
         dataSource {
+            /*
+            * REMOTE
+            * */
             dbCreate = "update"
+            driverClassName = "org.postgresql.Driver"
+            dialect = "org.hibernate.dialect.PostgreSQLDialect"
+            host = System.env.OPENSHIFT_POSTGRESQL_DB_HOST
+            port = System.env.OPENSHIFT_POSTGRESQL_DB_PORT
+            url = "jdbc:postgresql://"+host+":"+port+"/"+System.env.OPENSHIFT_APP_NAME
+            username = System.env.OPENSHIFT_POSTGRESQL_DB_USERNAME
+            password = System.env.OPENSHIFT_POSTGRESQL_DB_PASSWORD
+            /*
+            * LOCAL USAR CUANDO SE QUIERA EJECUTAR ESTE EN OCAL CONECTADO A BIGDATA EN SERVIDOR REMOTO STAGING
+            * */
+
+            /*dbCreate = "update"
             driverClassName = "org.postgresql.Driver"
             dialect = "org.hibernate.dialect.PostgreSQLDialect"
             url = "jdbc:postgresql://localhost:5432/newNest5DB3"
             username = "postgres"
-            password = "qtagtech"
-        }
+            password = "qtagtech"*/
+         }
     }
     production {
         dataSource {
             dbCreate = "update"
             driverClassName = "org.postgresql.Driver"
-            dialect = org.hibernate.dialect.PostgreSQLDialect
+            dialect = "org.hibernate.dialect.PostgreSQLDialect"
             host = System.env.OPENSHIFT_POSTGRESQL_DB_HOST
             port = System.env.OPENSHIFT_POSTGRESQL_DB_PORT
             url = "jdbc:postgresql://"+host+":"+port+"/"+System.env.OPENSHIFT_APP_NAME

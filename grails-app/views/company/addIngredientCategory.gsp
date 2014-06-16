@@ -111,7 +111,7 @@
             return  $.ajax({
                 type: "POST",
                 url: url,
-                data:{table:table,row_id:rowid,sync_row_id:syncrowid,fields:fields},
+                data:{table:table,row_id:rowid,sync_row_id:syncrowid,sync_id:syncrowid,fields:fields},
                 dataType: 'json'
             }).promise();
         }

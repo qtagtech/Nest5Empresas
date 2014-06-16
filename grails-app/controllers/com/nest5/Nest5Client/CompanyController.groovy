@@ -11,6 +11,7 @@ import groovyx.net.http.Method
 import org.joda.time.format.DateTimeFormat
 import org.joda.time.format.DateTimeFormatter
 import org.springframework.dao.DataIntegrityViolationException
+import groovyx.net.http.ContentType.*
 
 class CompanyController {
     def springSecurityService
@@ -230,7 +231,7 @@ class CompanyController {
         def http = new HTTPBuilder( grailsApplication.config.com.nest5.Nest5Client.bigDataServerURL )
         def jsonData
         // perform a GET request, expecting JSON response data
-        http.request( GET, TEXT ) {
+        http.request( GET, ContentType.TEXT ) {
 
             uri.path = grailsApplication.config.com.nest5.Nest5Client.bigDataPath+'databaseOps/allSales'
             uri.query = [company: user.id]
@@ -283,14 +284,14 @@ class CompanyController {
             // response handler for a success response code:
             response.success = { resp, json ->
                 // parse the JSON response object:
-                jsonData = ContentType.JSON.parse(json)
+                jsonData = JSON.parse(json)
             }
 
             // handler for any failure status code:
             response.failure = { resp,json ->
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
                 //resp.setStatus(400)
-                println ContentType.JSON.parse(json)
+                println JSON.parse(json)
                 return
             }
         }
@@ -325,14 +326,14 @@ class CompanyController {
 
 
                 // parse the JSON response object:
-                jsonData = ContentType.JSON.parse(json)
+                jsonData = JSON.parse(json)
 
             }
 
             // handler for any failure status code:
             response.failure = { resp,json ->
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
-                println ContentType.JSON.parse(json)
+                println JSON.parse(json)
                 return
             }
         }
@@ -364,14 +365,14 @@ class CompanyController {
             // response handler for a success response code:
             response.success = { resp, json ->
                 // parse the JSON response object:
-                jsonData = ContentType.JSON.parse(json)
+                jsonData = JSON.parse(json)
             }
 
             // handler for any failure status code:
             response.failure = { resp,json ->
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
                 //resp.setStatus(400)
-                println ContentType.JSON.parse(json)
+                println JSON.parse(json)
                 return
             }
         }
@@ -396,11 +397,11 @@ class CompanyController {
             uri.query = [company: user.id, invoice: numb]
             headers.'User-Agent' = 'Mozilla/5.0 Ubuntu/8.10 Firefox/3.0.4'
             response.success = { resp, json ->
-                jsonData = ContentType.JSON.parse(json)
+                jsonData = JSON.parse(json)
             }
             response.failure = { resp,json ->
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
-                println ContentType.JSON.parse(json)
+                println JSON.parse(json)
                 return
             }
         }
@@ -430,7 +431,7 @@ class CompanyController {
                 //println resp.contentType
 
                 // parse the JSON response object:
-                jsonData = ContentType.JSON.parse(json)
+                jsonData = JSON.parse(json)
                 //println jsonData
             }
 
@@ -439,7 +440,7 @@ class CompanyController {
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
                 //resp.setStatus(400)
 
-                println ContentType.JSON.parse(json)
+                println JSON.parse(json)
 
                 return
             }
@@ -481,7 +482,7 @@ class CompanyController {
                 //println resp.contentType
 
                 // parse the JSON response object:
-                jsonData = ContentType.JSON.parse(json)
+                jsonData = JSON.parse(json)
                 //println jsonData
             }
 
@@ -490,7 +491,7 @@ class CompanyController {
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
                 //resp.setStatus(400)
 
-                println ContentType.JSON.parse(json)
+                println JSON.parse(json)
 
                 return
             }
@@ -525,11 +526,11 @@ class CompanyController {
             uri.query = [company:user.id,table: 'ingredient_category']
             headers.'User-Agent' = 'Mozilla/5.0 Ubuntu/8.10 Firefox/3.0.4'
             response.success = { resp, json ->
-                jsonData = ContentType.JSON.parse(json)
+                jsonData = JSON.parse(json)
             }
             response.failure = { resp,json ->
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
-                println ContentType.JSON.parse(json)
+                printlnJSON.parse(json)
                 result = [status: 404, message: json]
             }
         }
@@ -559,11 +560,11 @@ class CompanyController {
             uri.query = [company:user.id,table: 'product_category']
             headers.'User-Agent' = 'Mozilla/5.0 Ubuntu/8.10 Firefox/3.0.4'
             response.success = { resp, json ->
-                jsonData = ContentType.JSON.parse(json)
+                jsonData = JSON.parse(json)
             }
             response.failure = { resp,json ->
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
-                println ContentType.JSON.parse(json)
+                println JSON.parse(json)
                 result = [status: 404, message: json]
             }
         }
@@ -588,16 +589,16 @@ class CompanyController {
         def http = new HTTPBuilder( grailsApplication.config.com.nest5.Nest5Client.bigDataServerURL )
         def jsonData
         def result
-        http.request( Method.GET, ContentType.TEXT ) {
+        http.request( Method.GET,ContentType.TEXT ) {
             uri.path = grailsApplication.config.com.nest5.Nest5Client.bigDataPath+'rowOps/fetchProperty'
             uri.query = [company:user.id,table: 'ingredient']
             headers.'User-Agent' = 'Mozilla/5.0 Ubuntu/8.10 Firefox/3.0.4'
             response.success = { resp, json ->
-                jsonData = ContentType.JSON.parse(json)
+                jsonData = JSON.parse(json)
             }
             response.failure = { resp,json ->
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
-                println ContentType.JSON.parse(json)
+                println JSON.parse(json)
                 result = [status: 404, message: json]
             }
         }
@@ -627,11 +628,11 @@ class CompanyController {
             uri.query = [company:user.id,table: 'product']
             headers.'User-Agent' = 'Mozilla/5.0 Ubuntu/8.10 Firefox/3.0.4'
             response.success = { resp, json ->
-                jsonData = ContentType.JSON.parse(json)
+                jsonData = JSON.parse(json)
             }
             response.failure = { resp,json ->
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
-                println ContentType.JSON.parse(json)
+                println JSON.parse(json)
                 result = [status: 404, message: json]
             }
         }
@@ -662,11 +663,11 @@ class CompanyController {
             uri.query = [company:user.id,table: 'combo']
             headers.'User-Agent' = 'Mozilla/5.0 Ubuntu/8.10 Firefox/3.0.4'
             response.success = { resp, json ->
-                jsonData = ContentType.JSON.parse(json)
+                jsonData = JSON.parse(json)
             }
             response.failure = { resp,json ->
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
-                println ContentType.JSON.parse(json)
+                println JSON.parse(json)
                 result = [status: 404, message: json]
             }
         }
@@ -697,11 +698,11 @@ class CompanyController {
             uri.query = [company:user.id]
             headers.'User-Agent' = 'Mozilla/5.0 Ubuntu/8.10 Firefox/3.0.4'
             response.success = { resp, json ->
-                jsonData = ContentType.JSON.parse(json)
+                jsonData = JSON.parse(json)
             }
             response.failure = { resp,json ->
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
-                println ContentType.JSON.parse(json)
+                println JSON.parse(json)
                 result = [status: 404, message: json]
             }
         }
@@ -790,12 +791,12 @@ class CompanyController {
             uri.query = [company:user.id,row: id]
             headers.'User-Agent' = 'Mozilla/5.0 Ubuntu/8.10 Firefox/3.0.4'
             response.success = { resp, json ->
-                jsonData = ContentType.JSON.parse(json)
+                jsonData =JSON.parse(json)
                 println jsonData
             }
             response.failure = { resp,json ->
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
-                println ContentType.JSON.parse(json)
+                println JSON.parse(json)
                 result = [status: 404, message: json]
             }
         }
@@ -820,12 +821,12 @@ class CompanyController {
             uri.query = [company:user.id,row: id]
             headers.'User-Agent' = 'Mozilla/5.0 Ubuntu/8.10 Firefox/3.0.4'
             response.success = { resp, json ->
-                jsonData = ContentType.JSON.parse(json)
+                jsonData = JSON.parse(json)
                 println jsonData
             }
             response.failure = { resp,json ->
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
-                println ContentType.JSON.parse(json)
+                println JSON.parse(json)
                 result = [status: 404, message: json]
             }
         }
@@ -850,12 +851,12 @@ class CompanyController {
             uri.query = [company:user.id,row: id]
             headers.'User-Agent' = 'Mozilla/5.0 Ubuntu/8.10 Firefox/3.0.4'
             response.success = { resp, json ->
-                jsonData = ContentType.JSON.parse(json)
+                jsonData = JSON.parse(json)
                 println jsonData
             }
             response.failure = { resp,json ->
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
-                println ContentType.JSON.parse(json)
+                println JSON.parse(json)
                 result = [status: 404, message: json]
             }
         }
@@ -880,7 +881,7 @@ class CompanyController {
             uri.query = [company:user.id,row: id]
             headers.'User-Agent' = 'Mozilla/5.0 Ubuntu/8.10 Firefox/3.0.4'
             response.success = { resp, json ->
-                jsonData = ContentType.JSON.parse(json)
+                jsonData = JSON.parse(json)
             }
             response.failure = { resp,json ->
                 result = [status: 404, message: json]
@@ -899,11 +900,11 @@ class CompanyController {
             uri.query = [company:user.id,row: id]
             headers.'User-Agent' = 'Mozilla/5.0 Ubuntu/8.10 Firefox/3.0.4'
             response.success = { resp, json ->
-                jsonData2 = ContentType.JSON.parse(json)
+                jsonData2 = JSON.parse(json)
             }
             response.failure = { resp,json ->
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
-                println ContentType.JSON.parse(json)
+                println JSON.parse(json)
                 result = [status: 404, message: json]
             }
         }
@@ -926,11 +927,11 @@ class CompanyController {
             uri.query = [company:user.id,row: id]
             headers.'User-Agent' = 'Mozilla/5.0 Ubuntu/8.10 Firefox/3.0.4'
             response.success = { resp, json ->
-                jsonData = ContentType.JSON.parse(json)
+                jsonData = JSON.parse(json)
             }
             response.failure = { resp,json ->
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
-                println ContentType.JSON.parse(json)
+                println JSON.parse(json)
                 result = [status: 404, message: json]
             }
         }
@@ -960,12 +961,12 @@ class CompanyController {
             println uri.query
             headers.'User-Agent' = 'Mozilla/5.0 Ubuntu/8.10 Firefox/3.0.4'
             response.success = { resp, json ->
-                jsonData = ContentType.JSON.parse(json)
+                jsonData = JSON.parse(json)
                 println jsonData
             }
             response.failure = { resp,json ->
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
-                println ContentType.JSON.parse(json)
+                println JSON.parse(json)
                 result = [status: 404, message: json]
             }
         }
@@ -1001,13 +1002,13 @@ class CompanyController {
 
             // response handler for a success response code:
             response.success = { resp, json ->
-                jsonData = ContentType.JSON.parse(json)
+                jsonData = JSON.parse(json)
             }
 
             // handler for any failure status code:
             response.failure = { resp,json ->
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
-                println ContentType.JSON.parse(json)
+                println JSON.parse(json)
                 return
             }
         }
@@ -1041,34 +1042,29 @@ class CompanyController {
         def user = springSecurityService.currentUser as Company
         def http = new HTTPBuilder( grailsApplication.config.com.nest5.Nest5Client.bigDataServerURL )
         def jsonData
-        println params
         // perform a GET request, expecting JSON response data
-        http.request( Method.POST, ContentType.TEXT ) {
-
+        http.request( Method.POST,ContentType.TEXT ) {
             uri.path = grailsApplication.config.com.nest5.Nest5Client.bigDataPath+'rowOps/rowReceived'
             def now = Calendar.getInstance(Locale.default)
             def nowmillis = now.getTimeInMillis()
             params.put("time_created",nowmillis)
-            params.put("device_id",new StringBuilder().append(user.id).append((user.email).encodeAsMD5()).toString())
-            def fields = ContentType.JSON.parse(params.fields)
+            params.put("device_id","DdLrWE6UPLM0uYhSlUO7")
+            def fields = JSON.parse(params.fields)
             params.fields = fields
-            uri.query = [row:params as JSON,sync_row_id:params.sync_row_id]
-           // println uri
-
+            uri.query = [row:params as JSON,sync_row_id:params.sync_row_id,company: user.id]
             headers.'User-Agent' = 'Mozilla/5.0 Ubuntu/8.10 Firefox/3.0.4'
 
             // response handler for a success response code:
             response.success = { resp, json ->
-
                 // parse the JSON response object:
-                jsonData = ContentType.JSON.parse(json)
+                jsonData = JSON.parse(json)
 
             }
 
             // handler for any failure status code:
             response.failure = { resp,json ->
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
-                println ContentType.JSON.parse(json)
+                println JSON.parse(json)
                 //resp.setStatus(400)
 
                 return
@@ -1092,6 +1088,7 @@ class CompanyController {
         }
 
 
+
     }
 //@Secured(["ROLE_COMPANY"])
     def saveDevice(){
@@ -1103,11 +1100,11 @@ class CompanyController {
             uri.query = [row: params?.uid,company: user?.id, name: params?.name, prefix: params?.prefix, maxSale: params?.maxSale,currentSale: params?.currentSale,resolution: params?.resolution]
             headers.'User-Agent' = 'Mozilla/5.0 Ubuntu/8.10 Firefox/3.0.4'
             response.success = { resp, json ->
-                jsonData = ContentType.JSON.parse(json)
+                jsonData = JSON.parse(json)
             }
             response.failure = { resp,json ->
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
-                println ContentType.JSON.parse(json)
+                println JSON.parse(json)
                 return
             }
         }
@@ -1533,7 +1530,7 @@ class CompanyController {
                  uri.query = [payload:"{company: "+user.id+",device_id:'"+new StringBuilder().append(user.id).append((user.email).encodeAsMD5()).toString()+"'}"]
                  headers.'User-Agent' = 'Mozilla/5.0 Ubuntu/8.10 Firefox/3.0.4'
                  response.success = { resp, json ->
-                     jsonData = ContentType.JSON.parse(json)
+                     jsonData = JSON.parse(json)
                  }
                  response.failure = { resp,json ->
                  }

@@ -86,7 +86,7 @@
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 
-<script src="${resource(dir: 'js/dashboard/bootstrap', file: 'bootstrap.min.js')}"></script>
+<script src="${resource(dir: 'dashboard/bootstrap', file: 'bootstrap.min.js')}"></script>
 
 
 <script>

@@ -33,8 +33,8 @@ modules = {
     }
     bootstrapswitch{
         dependsOn('maskedinput')
-        resource id: 'bootstrapswitch',url: 'js/dashboard/libs/bootstrapswitch/js/bootstrap-switch.min.js'
-        resource id: 'bootstrapswitchcss', url: 'js/dashboard/libs/bootstrapswitch/css/bootstrap3/bootstrap-switch.min.css', disposition: 'head'
+        resource id: 'bootstrapswitch',url: 'dashboard/libs/bootstrapswitch/js/bootstrap-switch.min.js'
+        resource id: 'bootstrapswitchcss', url: 'dashboard/libs/bootstrapswitch/css/bootstrap3/bootstrap-switch.min.css', disposition: 'head'
     }
     uniform{
         dependsOn('bootstrapswitch')
@@ -71,11 +71,11 @@ modules = {
     }
     uitimepicker{
         dependsOn('duallistbox')
-        resource id: 'uitimepicker',url: 'js/dashboard/supr-theme/jquery-ui-timepicker-addon.js'
+        resource id: 'uitimepicker',url: 'dashboard/supr-theme/jquery-ui-timepicker-addon.js'
     }
     uislider{
         dependsOn('uitimepicker')
-        resource id: 'uislider',url: 'js/dashboard/supr-theme/jquery-ui-sliderAccess.js'
+        resource id: 'uislider',url: 'dashboard/supr-theme/jquery-ui-sliderAccess.js'
     }
     //Otros de formulario que estoy usando
     validate{
@@ -101,24 +101,24 @@ modules = {
 
     mainscript{
         dependsOn('plugins')
-        resource id: 'mainscript', url:'js/dashboard/main.js'
+        resource id: 'mainscript', url:'dashboard/main.js'
     }
 
     //pagina crear ingredientes, productos, etc
     formvalidation{
         dependsOn('mainscript')
-        resource id: 'formvalidation', url:'js/dashboard/form-validation.js'
+        resource id: 'formvalidation', url:'dashboard/form-validation.js'
     }
 
     /*Pagina dashboard*/
 
     dashboard{
         dependsOn("mainscript")
-        resource id: 'dashboard', url:'js/dashboard/dashboard.js'
+        resource id: 'dashboard', url:'dashboard/dashboard.js'
     }
     tables{
 
-        resource id: 'tables', url:'js/dashboard/tables.js'
+        resource id: 'tables', url:'dashboard/tables.js'
     }
 
     jquerydatatables{
@@ -128,8 +128,8 @@ modules = {
     datepicker{
 
         dependsOn("mainscript")
-        resource id: 'datepicker', url:'js/dashboard/libs/datepicker/js/bootstrap-datepicker.js'
-        resource id: 'datepickercss', url:'js/dashboard/libs/datepicker/css/datepicker3.css'
+        resource id: 'datepicker', url:'dashboard/libs/datepicker/js/bootstrap-datepicker.js'
+        resource id: 'datepickercss', url:'dashboard/libs/datepicker/css/datepicker3.css'
     }
     tabletools{
 
@@ -148,7 +148,7 @@ modules = {
     }
     datatables{
         dependsOn("mainscript")
-        resource id: 'datatables', url:'js/dashboard/datatable.js'
+        resource id: 'datatables', url:'dashboard/datatable.js'
     }
 
     accounting{

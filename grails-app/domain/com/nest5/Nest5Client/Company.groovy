@@ -3,8 +3,8 @@ package com.nest5.Nest5Client
 class Company extends SecUser {
 
     static belongsTo = [category: Category]
-    static hasMany = [managedStores:Store/*,managedPromos: Promo,clients: Relation,chats: Message*/]
-    static mappedBy = [managedStores:"company"/*,managedPromos:"company"*/]
+    static hasMany = [stores:Store,files:MediaCompany/*,managedPromos: Promo,clients: Relation,chats: Message*/]
+/*    static mappedBy = [managedStores:"company"*//*,managedPromos:"company"*//*]*/
     String name
     String address
     String telephone

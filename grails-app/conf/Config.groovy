@@ -96,17 +96,17 @@ environments {
         grails.app.context = "/"
         grails.plugin.springsecurity.facebook.appId='171676339619557'
         grails.plugin.springsecurity.facebook.secret='c75f74270ce8dfdb455f05304fa68fc1'
-        com.nest5.Nest5Client.bigDataServerURL = "http://192.168.1.189:8090"
+        com.nest5.Nest5Client.bigDataServerURL = "http://hookthemapp.localhost.com:8090"
         com.nest5.Nest5Client.bigDataPath = "/Nest5BusinessData/"
     }
-    test{
+    staging{
         grails.logging.jul.usebridge = true
-        grails.serverURL = "http://hookthemapp.localhost.com:8080"
+        grails.serverURL = "http://staging.nest5.com"
         grails.app.context = "/"
         grails.plugin.springsecurity.facebook.appId='171676339619557'
         grails.plugin.springsecurity.facebook.secret='c75f74270ce8dfdb455f05304fa68fc1'
-        com.nest5.Nest5Client.bigDataServerURL = "http://192.168.1.189:8090"
-        com.nest5.Nest5Client.bigDataPath = "/Nest5BusinessData/"
+        com.nest5.Nest5Client.bigDataServerURL = "bigdatastaging.nest5.com"
+        com.nest5.Nest5Client.bigDataPath = "/"
     }
     production {
         grails.logging.jul.usebridge = true
@@ -155,10 +155,7 @@ log4j = {
 }
 
 
-// Added by the Spring Security Core plugin:
-grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.nest5.Nest5Client.SecUser'
-grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.nest5.Nest5Client.SecUserSecRole'
-grails.plugin.springsecurity.authority.className = 'com.nest5.Nest5Client.SecRole'
+
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/':                              ['permitAll'],
 	'/index':                         ['permitAll'],
@@ -174,11 +171,52 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
     '/**/sky_forms/**':               ['permitAll'],
     '/company/**':                      ['ROLE_ADMIN'],
     '/company/dashboard/**':          ['ROLE_COMPANY'],
+    '/company/addCombo/**':          ['ROLE_COMPANY'],
+    '/company/addIngredient/**':          ['ROLE_COMPANY'],
+    '/company/addIngredientCategory/**':          ['ROLE_COMPANY'],
+    '/company/addMeasuramentUnit/**':          ['ROLE_COMPANY'],
+    '/company/addProduct/**':          ['ROLE_COMPANY'],
+    '/company/addProductCategory/**':          ['ROLE_COMPANY'],
+    '/company/addTax/**':          ['ROLE_COMPANY'],
+    '/company/combos/**':          ['ROLE_COMPANY'],
+    '/company/devices/**':          ['ROLE_COMPANY'],
+    '/company/editCombos/**':          ['ROLE_COMPANY'],
+    '/company/editDevice/**':          ['ROLE_COMPANY'],
+    '/company/editIngredient/**':          ['ROLE_COMPANY'],
+    '/company/editIngredientCategory/**':          ['ROLE_COMPANY'],
+    '/company/editProduct/**':          ['ROLE_COMPANY'],
+    '/company/editProductCategory/**':          ['ROLE_COMPANY'],
+    '/company/fetchProperty/**':          ['ROLE_COMPANY'],
+    '/company/history/**':          ['ROLE_COMPANY'],
+    '/company/information/**':          ['ROLE_COMPANY'],
+    '/company/ingredientCategories/**':          ['ROLE_COMPANY'],
+    '/company/ingredients/**':          ['ROLE_COMPANY'],
+    '/company/invoice/**':          ['ROLE_COMPANY'],
+    '/company/invoiceRequest/**':          ['ROLE_COMPANY'],
+    '/company/invoices/**':          ['ROLE_COMPANY'],
+    '/company/productCategories/**':          ['ROLE_COMPANY'],
+    '/company/products/**':          ['ROLE_COMPANY'],
+    '/company/report/**':          ['ROLE_COMPANY'],
+    '/company/reportRequest/**':          ['ROLE_COMPANY'],
+    '/company/saveDevice/**':          ['ROLE_COMPANY'],
+    '/company/saveInfo/**':          ['ROLE_COMPANY'],
+    '/company/saveRow/**':          ['ROLE_COMPANY'],
+    '/company/tables/**':          ['ROLE_COMPANY'],
 	'/**/favicon.ico':                ['permitAll'],
+    '/**/api/**':                ['permitAll']
+
 
 ]
 
 
 
 grails.plugin.springsecurity.facebook.domain.classname='com.nest5.Nest5Client.FacebookUser'
+
+
+
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.nest5.Nest5Client.SecUser'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.nest5.Nest5Client.SecUserSecRole'
+grails.plugin.springsecurity.authority.className = 'com.nest5.Nest5Client.SecRole'
+
 

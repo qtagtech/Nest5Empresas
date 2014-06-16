@@ -9,7 +9,7 @@ class Relation {
     Date firstTime
 
 
-    static Relation link(company, user) {
+    /*static Relation link(company, user) {
         def m = Relation.findByCompanyAndUser(company, user)
         if (!m)
         {
@@ -27,9 +27,9 @@ class Relation {
 
         }
         return m
-    }
+    }*/
 
-    static void unlink(company, user) {
+    /*static void unlink(company, user) {
         def m = Relation.findByCompanyAndUser(company, user)
         if (m)
         {
@@ -37,7 +37,7 @@ class Relation {
             user?.removeFromBrands(m)
             m.delete()
         }
-    }
+    }*/
 
 
 

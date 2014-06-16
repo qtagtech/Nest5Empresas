@@ -2,7 +2,7 @@ package com.nest5.Nest5Client
 
 class Family {
 
-    Universe universe
+    static belongsTo = [universe: Universe]
     String name
     String description
     Icon icon

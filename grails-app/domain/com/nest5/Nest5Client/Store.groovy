@@ -7,7 +7,6 @@ class Store {
     String name
     BigDecimal latitude = 0
     BigDecimal longitude = 0
-    Company company
     String code
 
     /*List promos() {

@@ -13,10 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Force IE9 to render in normal mode -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <!-- Le styles -->
-    <!-- Use new way for google web fonts
-    http://www.smashingmagazine.com/2012/07/11/avoiding-faux-weights-styles-google-web-fonts -->
     <!-- Headings -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
     <!-- Text -->
@@ -39,8 +35,6 @@
     <link href="${resource(dir:'dashboard/plugins/misc/fullcalendar',file: 'fullcalendar.css')}" rel="stylesheet" type="text/css" />
     <link href="${resource(dir:'dashboard/plugins/misc/search',file: 'tipuesearch.css')}" type="text/css" rel="stylesheet" />
     <link href="${resource(dir:'dashboard/plugins/misc/pnotify',file: 'jquery.pnotify.default.css')}" type="text/css" rel="stylesheet" />
-
-    %{--<link href="${resource(dir:'dashboard/plugins/forms/uniform',file: 'uniform.default.css')}" type="text/css" rel="stylesheet" />--}%
     <r:layoutResources/>
     <!-- Main stylesheets -->
     <link href="${resource(dir:'dashboard/css',file: 'main.css')}" rel="stylesheet" type="text/css" />
@@ -53,9 +47,9 @@
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script type="text/javascript" src="${resource(dir:'js/dashboard/js/libs',file: 'excanvas.min.js')}"></script>
+      <script type="text/javascript" src="${resource(dir:'dashboard/libs',file: 'excanvas.min.js')}"></script>
       <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-      <script type="text/javascript" src="${resource(dir:'js/dashboard/js/libs',file: 'respond.min.js')}"></script>
+      <script type="text/javascript" src="${resource(dir:'dashboard/libs',file: 'respond.min.js')}"></script>
     <![endif]-->
 
     <!-- Le fav and touch icons -->
@@ -70,21 +64,8 @@
     <meta name="msapplication-TileColor" content="#3399cc"/>
 
     <!-- Load modernizr first -->
-    <script type="text/javascript" src="${resource(dir:'js/dashboard/js/libs',file: 'modernizr.js')}"></script>
+    <script type="text/javascript" src="${resource(dir:'dashboard/libs',file: 'modernizr.js')}"></script>
     <g:layoutHead/>
-    <!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
-        typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
-    b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
-mixpanel.init("161340edaf1056341a0d09e6ddf6dbc3");</script><!-- end Mixpanel -->
-%{--<!--Start of Zopim Live Chat Script-->
-    <script type="text/javascript">
-        window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-                d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-                _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
-            $.src='//v2.zopim.com/?1xsHnKf4laKP8M2R0DSQGfFgOD7y2NLK';z.t=+new Date;$.
-                    type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
-    </script>
-    <!--End of Zopim Live Chat Script-->--}%
 </head>
 	<body>
     <!-- loading animation -->
@@ -432,9 +413,9 @@ mixpanel.init("161340edaf1056341a0d09e6ddf6dbc3");</script><!-- end Mixpanel -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="${resource(dir:'js/dashboard/js/bootstrap',file: 'bootstrap.js')}"></script>
-    <script type="text/javascript" src="${resource(dir:'js/dashboard/js/',file: 'jquery.mousewheel.js')}"></script>
-    <script type="text/javascript" src="${resource(dir:'js/dashboard/js/libs',file: 'jRespond.min.js')}"></script>
+    <script type="text/javascript" src="${resource(dir:'dashboard/bootstrap',file: 'bootstrap.js')}"></script>
+    <script type="text/javascript" src="${resource(dir:'dashboard',file: 'jquery.mousewheel.js')}"></script>
+    <script type="text/javascript" src="${resource(dir:'dashboard/libs',file: 'jRespond.min.js')}"></script>
 
     <!-- Charts plugins -->
     <script type="text/javascript" src="${resource(dir:'dashboard/plugins/charts/flot',file: 'jquery.flot.js')}"></script>
@@ -460,10 +441,9 @@ mixpanel.init("161340edaf1056341a0d09e6ddf6dbc3");</script><!-- end Mixpanel -->
     <script type="text/javascript" src="${resource(dir:'dashboard/plugins/misc/search',file:'tipuesearch.js')}"></script>
 
 
-    <script src="${resource(dir: 'js/libs/vague',file:'Vague.js')}"></script>
+
 
     <!-- Form plugins -->
-    %{--<script type="text/javascript" src="${resource(dir:'dashboard/plugins/forms/uniform',file:'jquery.uniform.min.js')}"></script>--}%
     <r:script>
 var loading1;
 function loadContent(){

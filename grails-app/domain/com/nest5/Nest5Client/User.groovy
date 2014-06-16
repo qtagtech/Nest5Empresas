@@ -53,15 +53,15 @@ class User extends SecUser {
         return promos()
     }*/
 
-    List addToCompany(Company company) {
+    /*List addToCompany(Company company) {
         Relation.link(company,this)
         return brands()
-    }
+    }*/
 
-    List removeFromCompany(Company company) {
+    /*List removeFromCompany(Company company) {
         Relation.unlink(company,this)
         return brands()
-    }
+    }*/
 
   /*  List addToFriend(User user){
         Friendship.link(this,user)
