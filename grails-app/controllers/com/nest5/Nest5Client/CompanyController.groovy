@@ -1053,7 +1053,9 @@ class CompanyController {
             params.fields = fields
             uri.query = [row:params as JSON,sync_row_id:params.sync_row_id,company: user.id]
             headers.'User-Agent' = 'Mozilla/5.0 Ubuntu/8.10 Firefox/3.0.4'
-
+            if(params.debug=="nest5_yes"){
+                response.setHeader("bigDataURL",uri)
+            }
             // response handler for a success response code:
             response.success = { resp, json ->
                 // parse the JSON response object:

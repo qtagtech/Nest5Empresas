@@ -105,7 +105,7 @@ environments {
         grails.app.context = "/"
         grails.plugin.springsecurity.facebook.appId='171676339619557'
         grails.plugin.springsecurity.facebook.secret='c75f74270ce8dfdb455f05304fa68fc1'
-        com.nest5.Nest5Client.bigDataServerURL = "bigdatastaging.nest5.com"
+        com.nest5.Nest5Client.bigDataServerURL = "http://bigdatastaging.nest5.com"
         com.nest5.Nest5Client.bigDataPath = "/"
     }
     production {
@@ -203,7 +203,7 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
     '/company/saveRow/**':          ['ROLE_COMPANY'],
     '/company/tables/**':          ['ROLE_COMPANY'],
 	'/**/favicon.ico':                ['permitAll'],
-    '/**/api/**':                ['permitAll']
+    '/api/**':                ['permitAll']
 
 
 ]
