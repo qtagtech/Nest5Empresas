@@ -3,6 +3,7 @@ package com.nest5.Nest5Client
 import grails.converters.JSON
 
 class ApiController {
+    def springSecurityService
 
     def index() {}
 
@@ -24,8 +25,7 @@ class ApiController {
             render result as JSON
             return
         }
-        def password = springSecurityService.encodePassword(pass)
-        if(password == user.password){
+        if (springSecurityService?.passwordEncoder?.isPasswordValid(user.password, pass, null)) { //validates raw password against hashed
             result = [status: 1,id: user.id, email: user.email, name: user.name, username: user.username, phone: "000000"]
             render result as JSON
             return
@@ -38,9 +38,7 @@ class ApiController {
 
 
     def companyDetails(){
-        println request
         def username = params.company_id
-        println params
         //println username+" "+pass
         def result
         if(!username){
@@ -56,7 +54,7 @@ class ApiController {
             return
         }
 
-        result = [status: 1,company: user,category: [category:user.category,icon: user.category.icon]]
+        result = [status: 1,name: user?.name, telephone: user?.telephone, address: user?.address, email: user?.email,url: user?.url,invoiceMessage: user.invoiceMessage, tipMessage: user?.tipMessage, resolution: user?.resolution]
         response.setContentType("text/json")
         render(contentType:"text/json") {
             result

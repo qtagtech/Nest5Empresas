@@ -17,6 +17,7 @@ class Company extends SecUser {
     Boolean active = true
     String invoiceMessage = ""
     String tipMessage = ""
+    String resolution = ""
 
     static mapping = {
         invoiceMessage type: 'text'
