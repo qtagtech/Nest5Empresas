@@ -76,7 +76,7 @@ invokeTag('formatNumber','g',93,['number':(element?.fields?.cost_per_unit),'type
 printHtmlPart(20)
 invokeTag('formatNumber','g',94,['number':(element?.fields?.price_per_unit),'type':("currency"),'currencyCode':("COP"),'locale':("es_CO")],-1)
 printHtmlPart(20)
-invokeTag('formatNumber','g',95,['number':(element?.fields?.cost_per_unit / ((element?.fields?.price_per_unit != "NaN") && (element?.fields?.price_per_unit != 0))),'type':("number"),'maxFractionDigits':("2")],-1)
+invokeTag('formatNumber','g',95,['number':(element?.fields?.cost_per_unit / (((element?.fields?.price_per_unit != "NaN") && (element?.fields?.price_per_unit != 0)) ? element?.fields?.price_per_unit : 1)),'type':("number"),'maxFractionDigits':("2")],-1)
 printHtmlPart(20)
 invokeTag('formatNumber','g',96,['number':(element?.fields?.quantity),'type':("number"),'maxFractionDigits':("2")],-1)
 printHtmlPart(20)
@@ -97,7 +97,7 @@ protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1402794527479L
+public static final long LAST_MODIFIED = 1403046081742L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'

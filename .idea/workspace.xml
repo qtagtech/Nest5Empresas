@@ -67,8 +67,18 @@
       <file leaf-file-name="Company.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/com/nest5/Nest5Client/Company.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.086957" vertical-offset="68" max-vertical-offset="1428">
-              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1428">
+              <caret line="2" column="33" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ingredients.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/company/ingredients.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="2465">
+              <caret line="94" column="252" selection-start-line="94" selection-start-column="252" selection-end-line="94" selection-end-column="252" />
               <folding />
             </state>
           </provider>
@@ -84,20 +94,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompanyController.groovy" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CompanyController.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/nest5/Nest5Client/CompanyController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.652174" vertical-offset="18275" max-vertical-offset="26180">
-              <caret line="1095" column="31" selection-start-line="1095" selection-start-column="21" selection-end-line="1095" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.7090352" vertical-offset="11454" max-vertical-offset="26180">
+              <caret line="712" column="32" selection-start-line="712" selection-start-column="32" selection-end-line="712" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApiController.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ApiController.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/nest5/Nest5Client/ApiController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8315467" vertical-offset="375" max-vertical-offset="1241">
+            <state vertical-scroll-proportion="0.0" vertical-offset="339" max-vertical-offset="1241">
               <caret line="54" column="89" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
               <folding />
             </state>
@@ -107,7 +117,7 @@
       <file leaf-file-name="SecUser.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/com/nest5/Nest5Client/SecUser.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.8125" vertical-offset="0" max-vertical-offset="816">
+            <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="816">
               <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="117" />
               <folding />
             </state>
@@ -120,7 +130,7 @@
       <file leaf-file-name="editIngredientCategory.gsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/company/editIngredientCategory.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.530612" vertical-offset="1711" max-vertical-offset="2516">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1711" max-vertical-offset="2516">
               <caret line="131" column="61" selection-start-line="131" selection-start-column="61" selection-end-line="131" selection-end-column="61" />
               <folding />
             </state>
@@ -130,7 +140,7 @@
       <file leaf-file-name="addIngredientCategory.gsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/company/addIngredientCategory.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.244898" vertical-offset="1570" max-vertical-offset="2210">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1570" max-vertical-offset="2210">
               <caret line="119" column="35" selection-start-line="119" selection-start-column="34" selection-end-line="119" selection-end-column="34" />
               <folding />
             </state>
@@ -150,7 +160,7 @@
       <file leaf-file-name="User.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/com/nest5/Nest5Client/User.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="102" max-vertical-offset="1598">
+            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1598">
               <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
               <folding />
             </state>
@@ -212,9 +222,10 @@
         <option value="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/company/addIngredientCategory.gsp" />
         <option value="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/nest5/Nest5Client/CompanyController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/nest5/Nest5Client/ApiController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/com/nest5/Nest5Client/CompanyController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/nest5/Nest5Client/Company.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/company/ingredients.gsp" />
       </list>
     </option>
   </component>
@@ -270,6 +281,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Nest5BusinessData" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -503,12 +515,16 @@
       <workItem from="1402860526067" duration="17818000" />
       <workItem from="1402917929378" duration="974000" />
       <workItem from="1402922130548" duration="4273000" />
-      <workItem from="1402943418975" duration="5567000" />
+      <workItem from="1402943418975" duration="6165000" />
+      <workItem from="1403007810589" duration="9650000" />
+      <workItem from="1403093336045" duration="574000" />
+      <workItem from="1403096548112" duration="17000" />
+      <workItem from="1403097204954" duration="7538000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77431000" />
+    <option name="totallyTimeSpent" value="95808000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -532,7 +548,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -550,7 +566,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24653888" sideWeight="0.6700611" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26293105" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26185346" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -793,18 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.0625" vertical-offset="0" max-vertical-offset="238">
           <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/nest5/Nest5Client/Store.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8333333" vertical-offset="0" max-vertical-offset="731">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
@@ -825,7 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.7083333" vertical-offset="0" max-vertical-offset="391">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
@@ -856,7 +859,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="374">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
@@ -867,7 +869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="374">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
@@ -891,7 +892,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/nest5/Nest5Client/SecUser.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.8125" vertical-offset="0" max-vertical-offset="816">
+        <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="816">
           <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="117" />
           <folding />
         </state>
@@ -904,7 +905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27914613" vertical-offset="204" max-vertical-offset="1683">
           <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -913,7 +913,7 @@
         <state vertical-scroll-proportion="0.33333334" vertical-offset="7269" max-vertical-offset="20162">
           <caret line="453" column="22" selection-start-line="453" selection-start-column="17" selection-end-line="453" selection-end-column="22" />
           <folding>
-            <element signature="e#600#651#0" expanded="true" />
+            <element signature="e#600#651#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -930,7 +930,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17325228" vertical-offset="56" max-vertical-offset="714">
           <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -938,7 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.67173254" vertical-offset="612" max-vertical-offset="3366">
           <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -946,9 +944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.7051672" vertical-offset="464" max-vertical-offset="1122">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#2075#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -956,19 +951,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5889764" vertical-offset="255" max-vertical-offset="2227">
           <caret line="60" column="53" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
-          <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/nest5/Nest5Client/Company.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.086957" vertical-offset="68" max-vertical-offset="1428">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
@@ -992,7 +975,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/company/editIngredientCategory.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.530612" vertical-offset="1711" max-vertical-offset="2516">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1711" max-vertical-offset="2516">
           <caret line="131" column="61" selection-start-line="131" selection-start-column="61" selection-end-line="131" selection-end-column="61" />
           <folding />
         </state>
@@ -1000,24 +983,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/company/addIngredientCategory.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.244898" vertical-offset="1570" max-vertical-offset="2210">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1570" max-vertical-offset="2210">
           <caret line="119" column="35" selection-start-line="119" selection-start-column="34" selection-end-line="119" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/nest5/Nest5Client/CompanyController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.652174" vertical-offset="18275" max-vertical-offset="26180">
-          <caret line="1095" column="31" selection-start-line="1095" selection-start-column="21" selection-end-line="1095" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/nest5/Nest5Client/ApiController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8315467" vertical-offset="375" max-vertical-offset="1241">
+        <state vertical-scroll-proportion="0.0" vertical-offset="339" max-vertical-offset="1241">
           <caret line="54" column="89" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/nest5/Nest5Client/Company.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1428">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/company/ingredients.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="2465">
+          <caret line="94" column="252" selection-start-line="94" selection-start-column="252" selection-end-line="94" selection-end-column="252" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/nest5/Nest5Client/CompanyController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7090352" vertical-offset="11454" max-vertical-offset="26180">
+          <caret line="712" column="32" selection-start-line="712" selection-start-column="32" selection-end-line="712" selection-end-column="32" />
           <folding />
         </state>
       </provider>

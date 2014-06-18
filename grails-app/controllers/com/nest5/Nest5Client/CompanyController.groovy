@@ -530,7 +530,7 @@ class CompanyController {
             }
             response.failure = { resp,json ->
                 println "Unexpected error: ${resp.statusLine.statusCode} : ${resp.statusLine.reasonPhrase}"
-                printlnJSON.parse(json)
+                println JSON.parse(json)
                 result = [status: 404, message: json]
             }
         }
