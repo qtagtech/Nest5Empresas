@@ -2,7 +2,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if IE 9]>         <html class="no-js ie9"> <![endif]-->
 <!--[if gt IE 9]><!-->
-<html class="no-js">
+<html class="no-js" >
 <!--<![endif]-->
 <head>
 <meta charset="utf-8">
@@ -59,7 +59,6 @@ header
     </div>
   </nav>
 </header>
-
 <!--=================================
 home
 =================================-->
