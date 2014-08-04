@@ -5,6 +5,7 @@ import com.nest5.Nest5Client.SecRole
 import com.nest5.Nest5Client.SecUserSecRole
 import com.nest5.Nest5Client.Category
 import com.nest5.Nest5Client.Icon
+import com.nest5.Nest5Client.Seller
 import com.nest5.Nest5Client.User
 
 class BootStrap {
@@ -15,6 +16,7 @@ class BootStrap {
         def apiRole = SecRole.findByAuthority('ROLE_API') ?: new SecRole(authority: 'ROLE_API').save(failOnError: true)
         def facebookRole = SecRole.findByAuthority('ROLE_FACEBOOK') ?: new SecRole(authority: 'ROLE_FACEBOOK').save(failOnError: true)
         def companyRole = SecRole.findByAuthority('ROLE_COMPANY') ?: new SecRole(authority: 'ROLE_COMPANY').save(failOnError: true)
+        def sellerRole = SecRole.findByAuthority('ROLE_SELLER') ?: new SecRole(authority: 'ROLE_SELLER').save(failOnError: true)
         def memberRole =  SecRole.findByAuthority('ROLE_MEMBER') ?: new SecRole(authority: 'ROLE_MEMBER').save(failOnError: true)
 
         def adminUser = User.findByUsername('admin') ?: new User(
@@ -60,8 +62,26 @@ class BootStrap {
                 active: false
         ).save(failOnError: true)
 
+
+        def dummySeller = Seller.findByUsername('prueba@vendedores.com') ?: new Seller(
+
+                company: Company.findByUsername('minegocio@gmail.com') ?: dummyCompany,
+                username: 'prueba@vendedores.com',
+                password: 'farroyavefami',
+                enabled: true,
+                name : "Dummy Seller",
+                telephone: "00",
+                email: "prueba@vendedores.com",
+                registerDate: new Date(),
+                active: true,
+                identification: '71527117'
+        ).save(failOnError: true)
+
         if (!adminUser.authorities.contains(adminRole)) {
             SecUserSecRole.create adminUser, adminRole
+        }
+        if (!dummySeller.authorities.contains(sellerRole)) {
+            SecUserSecRole.create dummySeller, sellerRole
         }
         if (!dummyCompany.authorities.contains(companyRole)) {
             SecUserSecRole.create dummyCompany, companyRole
