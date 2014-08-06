@@ -53,6 +53,7 @@ class SellerController {
             notFound()
             return
         }
+        println "aca1"
         Seller sellerInstance = new Seller()
         sellerInstance.properties = params
         sellerInstance.company = company
@@ -62,7 +63,7 @@ class SellerController {
         sellerInstance.enabled = true
         sellerInstance.registerDate = new Date()
         sellerInstance.accountLocked= false
-
+        println "aca1"
         if(!sellerInstance.save (flush: true)){
             println sellerInstance.errors.allErrors
             notFound()

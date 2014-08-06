@@ -102,57 +102,46 @@
                                     </h4>
                                 </div>
                                 <div class="panel-body">
-                                    <form class="form-horizontal" id="create_seller" role="form">
+                                    <form class="form-horizontal" id="create_seller" role="form" action="${createLink(controller: 'seller', action: 'saveFromCompany')}" method="post">
                                     <div class="form-group">
-                                        <label class="col-lg-3 control-label" for="normalInput" name="nombre">Nombre Completo</label>
+                                        <label class="col-lg-3 control-label" for="normalInput">Nombre Completo</label>
                                         <div class="col-lg-9">
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" name="name">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-lg-3 control-label" for="normalInput" name="cedula">Cédula</label>
+                                        <label class="col-lg-3 control-label" for="normalInput">Cédula</label>
                                         <div class="col-lg-9">
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" name="identification">
                                         </div>
                                     </div><!-- End .form-group  -->
                                     <div class="form-group">
-                                        <label class="col-lg-3 control-label" for="normalInput" name="username">Username</label>
+                                        <label class="col-lg-3 control-label" for="normalInput">Username</label>
                                         <div class="col-lg-9">
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" name="username">
                                         </div>
                                     </div><!-- End .form-group  -->
                                     <div class="form-group">
-                                        <label class="col-lg-3 control-label" for="password" name="password">Password</label>
+                                        <label class="col-lg-3 control-label" for="password">Password</label>
                                         <div class="col-lg-9">
-                                            <input type="password" class="form-control">
+                                            <input type="password" class="form-control" name="password">
                                         </div>
                                     </div><!-- End .form-group  -->
                                     <div class="form-group">
-                                        <label class="col-lg-3 control-label" for="password" name="telefono">Telefóno</label>
+                                        <label class="col-lg-3 control-label" for="password">Telefóno</label>
                                         <div class="col-lg-9">
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" name="telephone">
                                         </div>
                                     </div><!-- End .form-group  -->
                                     <div class="form-group">
-                                        <label class="col-lg-3 control-label" for="password" name="email">Email</label>
+                                        <label class="col-lg-3 control-label" for="password">Email</label>
                                         <div class="col-lg-9">
-                                            <input type="email" class="form-control">
+                                            <input type="email" class="form-control" name="email">
                                         </div>
                                     </div><!-- End .form-group  -->
-                                    <div class="form-group">
-                                        <label class="col-lg-3 control-label" for="radios">Inline Radios</label>
-                                        <div class="col-lg-9">
-                                            <label class="radio-inline">
-                                                <input name="activo" type="radio"value="Si">
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input name="activo" type="radio" value="No">
-                                            </label>
-                                        </div>
-                                    </div>
                                     <div class="form-group">
                                          <div class="col-lg-9 btn_seller">
-                                             <button type="button" id="save_seller" class="btn btn-info">Guardar Vendedor</button>
+                                             <button type="submit" id="save_seller" class="btn btn-info">Guardar Vendedor</button>
                                          </div>
                                     </div>
                                 </form>
@@ -164,7 +153,7 @@
             </div><!-- End contentwrapper -->
         </div><!-- End #content -->
     <r:script>
-        $('#save_seller').on('click',function(){
+        /*$('#save_seller').on('click',function(){
             $.ajax({
                 url: '${createLink(controller: 'seller', action: 'saveFromCompany')}',
                 type: "POST",
