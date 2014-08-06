@@ -110,7 +110,7 @@ environments {
     }
     production {
         grails.logging.jul.usebridge = true
-        grails.serverURL = "http://nest5.com"
+        grails.serverURL = "http://www.nest5.com"
         grails.app.context = "/"
         grails.plugin.springsecurity.facebook.appId='550109801691585'
         grails.plugin.springsecurity.facebook.secret='513001ad6358dbb1cadedc820bd56b07'
@@ -205,7 +205,9 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/favicon.ico':                ['permitAll'],
     '/api/**':                ['permitAll'],
     '/company/createSeller/**':     ['ROLE_COMPANY'],
-    '/seller/saveFromCompany/**':     ['ROLE_COMPANY']
+    '/seller/saveFromCompany/**':     ['ROLE_COMPANY'],
+    '/seller/**':           ['ROLE_ADMIN']
+
 
 
 ]
