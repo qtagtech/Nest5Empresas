@@ -986,6 +986,12 @@ class CompanyController {
     }
 
 
+    def createSeller() {
+    }
+    def saveFromCompany() {
+    }
+
+
 //    @Secured(["ROLE_COMPANY"])
     def fetchProperty(){
         def user = springSecurityService.currentUser as Company
