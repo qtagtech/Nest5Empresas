@@ -98,7 +98,7 @@
                                                 <td>
                                                     <div class="controls center">
                                                         <a href="${createLink(controller: 'company',action: 'editIngredient',params: [id: element?.syncId])}" class="tip" oldtitle="Editar" title="" data-hasqtip="true" aria-describedby="qtip-13"><span class="icon12 icomoon-icon-pencil"></span></a>
-                                                        <a href="#" class="tip" oldtitle="Borrar" title="" data-hasqtip="true" aria-describedby="qtip-14"><span class="icon12 icomoon-icon-remove"></span></a>
+                                                        <a href="#" data-elementid="${element?.syncId}" class="tip delete-item" oldtitle="Borrar" title="" data-hasqtip="true" aria-describedby="qtip-14"><span class="icon12 icomoon-icon-remove"></span></a>
                                                     </div>
                                                 </td>
                                             </tr>

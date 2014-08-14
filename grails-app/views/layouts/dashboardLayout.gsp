@@ -460,6 +460,28 @@ function loadContent(){
                   e.preventDefault();
                  $("#fileselect").click();
              });
+
+             $("body").on('click',".delete-item",function(e){
+                  e.preventDefault();
+                  var r = confirm("¿Estás Seguro de Borrar este Elemento?");
+                    if (r == true) {
+                         var value = $(this).data("elementid");
+                          $.when(saveRow(value))
+                            .then(function(response){
+                                if(response.status == 1){
+                                    window.location.reload();
+
+                                }
+                                else{
+
+                                }
+                            })
+                    .fail(callError);
+                    }
+
+
+             });
+
             $("#fileselect").change(function(){
 //            console.log("aca");
                     var opts = {
@@ -536,7 +558,33 @@ function loadContent(){
             var perc = (e.loaded / e.total) * 100;
             }
         }
+function saveRow(sync){
+            var url = "${createLink(controller: 'company',action: 'saveRow')}";
+            var rowid = sync;
+            var syncrowid = sync;
+            var fields = "{" +
+              "\"name\":"+$("[name='name']").val()+
+              ",\"category_id\":"+$("#select-category option:selected").val()+
+              ",\"cost_per_unit\":"+null+
+              ",\"quantity\":"+null+
+              ",\"unit_id\":"+null+
+              ",\"price_measure\":"+null+
+              ",\"price_per_unit\":"+null+
+              ",\"tax_id\":"+null+
+              "}";
 
+            return  $.ajax({
+                type: "POST",
+                url: url,
+                data:{table:"",row_id:rowid,sync_id:syncrowid,sync_row_id:syncrowid,fields:fields,isdeleting: true},
+                dataType: 'json'
+            }).promise();
+        }
+
+        function callError(response){
+            console.log("error ajax");
+            console.log(response);
+        }
 
     </r:script>
 

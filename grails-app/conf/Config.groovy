@@ -98,6 +98,8 @@ environments {
         grails.plugin.springsecurity.facebook.secret='c75f74270ce8dfdb455f05304fa68fc1'
         com.nest5.Nest5Client.bigDataServerURL = "http://hookthemapp.localhost.com:8090"
         com.nest5.Nest5Client.bigDataPath = "/Nest5BusinessData/"
+        /*com.nest5.Nest5Client.bigDataServerURL = "http://bigdatastaging.nest5.com"
+        com.nest5.Nest5Client.bigDataPath = "/"*/
     }
     staging{
         grails.logging.jul.usebridge = true

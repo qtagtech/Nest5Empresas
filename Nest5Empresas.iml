@@ -48,7 +48,7 @@
       <excludeFolder url="file://$MODULE_DIR$/target/work/scriptCache" />
       <excludeFolder url="file://$MODULE_DIR$/target/work/tomcat" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library" exported="">
       <library name="Grails User Library (Nest5Empresas)">
@@ -106,7 +106,6 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="Nest5Empresas-grailsPlugins" />
-    <orderEntry type="library" name="grails-2.3.9" level="application" />
     <orderEntry type="library" name="grails-2.3.9" level="application" />
   </component>
 </module>
