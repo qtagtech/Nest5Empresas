@@ -34,11 +34,11 @@ class CompanyController {
     }
 
     //only admin
-    def create() {
+    /*def create() {
 
         println "asca"
-        [companyInstance: new Company(params)/*,promoInstance: new Promo(params)*/,storeInstance: new Store(params)]
-    }
+        [companyInstance: new Company(params)*//*,promoInstance: new Promo(params)*//*,storeInstance: new Store(params)]
+    }*/
 
     //only admin
     def save() {
@@ -606,7 +606,7 @@ class CompanyController {
         if(jsonData?.status != 200){
             result = [status: jsonData?.status, message: jsonData?.message]
         }
-        result = [status: jsonData.status, elements: jsonData.payload]
+        result = [status: jsonData?.status, elements: jsonData?.payload]
         //println result
         DateTimeFormatter dtf = DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss'Z'");
         result.elements.each{

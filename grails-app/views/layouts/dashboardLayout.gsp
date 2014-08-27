@@ -466,7 +466,7 @@ function loadContent(){
                   var r = confirm("¿Estás Seguro de Borrar este Elemento?");
                     if (r == true) {
                          var value = $(this).data("elementid");
-                          $.when(saveRow(value))
+                          $.when(saveRowDelete(value))
                             .then(function(response){
                                 if(response.status == 1){
                                     window.location.reload();
@@ -558,7 +558,7 @@ function loadContent(){
             var perc = (e.loaded / e.total) * 100;
             }
         }
-function saveRow(sync){
+function saveRowDelete(sync){
             var url = "${createLink(controller: 'company',action: 'saveRow')}";
             var rowid = sync;
             var syncrowid = sync;

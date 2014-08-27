@@ -70,20 +70,22 @@ invokeTag('formatDate','g',87,['date':(element?.timeReceived),'type':("datetime"
 printHtmlPart(18)
 expressionOut.print(createLink(controller: 'company',action: 'editProductCategory',params: [id: element?.syncId]))
 printHtmlPart(19)
+expressionOut.print(element?.syncId)
+printHtmlPart(20)
 i++
 }
 }
-printHtmlPart(20)
+printHtmlPart(21)
 })
 invokeTag('captureBody','sitemesh',123,[:],1)
-printHtmlPart(21)
+printHtmlPart(22)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1402794527489L
+public static final long LAST_MODIFIED = 1408035445094L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'

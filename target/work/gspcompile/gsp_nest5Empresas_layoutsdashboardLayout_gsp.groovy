@@ -169,29 +169,31 @@ expressionOut.print(resource(dir: 'images',file: 'preloader.gif'))
 printHtmlPart(58)
 expressionOut.print(createLink(controller: 'imageuploader', action: 'companyUploadMain'))
 printHtmlPart(59)
-})
-invokeTag('script','r',423,[:],2)
+expressionOut.print(createLink(controller: 'company',action: 'saveRow'))
 printHtmlPart(60)
-invokeTag('javascript','g',424,['library':("underscore")],-1)
-printHtmlPart(61)
-invokeTag('javascript','g',424,['library':("nextindom")],-1)
-printHtmlPart(61)
-invokeTag('javascript','g',424,['library':("plugins")],-1)
-printHtmlPart(61)
-invokeTag('javascript','g',425,['library':("mainscript")],-1)
-printHtmlPart(62)
-invokeTag('layoutResources','r',425,[:],-1)
-printHtmlPart(63)
 })
-invokeTag('captureBody','sitemesh',425,[:],1)
+invokeTag('script','r',440,[:],2)
+printHtmlPart(61)
+invokeTag('javascript','g',440,['library':("underscore")],-1)
+printHtmlPart(62)
+invokeTag('javascript','g',440,['library':("nextindom")],-1)
+printHtmlPart(62)
+invokeTag('javascript','g',441,['library':("plugins")],-1)
+printHtmlPart(62)
+invokeTag('javascript','g',441,['library':("mainscript")],-1)
+printHtmlPart(63)
+invokeTag('layoutResources','r',441,[:],-1)
 printHtmlPart(64)
+})
+invokeTag('captureBody','sitemesh',441,[:],1)
+printHtmlPart(65)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1402802120967L
+public static final long LAST_MODIFIED = 1409114041754L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'
