@@ -53,7 +53,6 @@ class SellerController {
             notFound()
             return
         }
-        println "aca1"
         Seller sellerInstance = new Seller()
         sellerInstance.properties = params
         sellerInstance.company = company
@@ -63,7 +62,6 @@ class SellerController {
         sellerInstance.enabled = true
         sellerInstance.registerDate = new Date()
         sellerInstance.accountLocked= false
-        println "aca1"
         if(!sellerInstance.save (flush: true)){
             println sellerInstance.errors.allErrors
             notFound()
@@ -72,8 +70,8 @@ class SellerController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'seller.label', default: 'Seller'), sellerInstance.id])
-                redirect sellerInstance
+                flash.message = message(code: 'default.created.message', args: [message(code: 'seller.label', default: 'Vendedor creado con Éxito'), sellerInstance.id])
+                redirect (controller: 'company',action: 'createSeller')
             }
             '*' { respond sellerInstance, [status: CREATED] }
         }

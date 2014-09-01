@@ -103,7 +103,10 @@
                                 </div>
                                 <div class="panel-body">
                                     <form class="form-horizontal" id="create_seller" role="form" action="${createLink(controller: 'seller', action: 'saveFromCompany')}" method="post">
-                                    <div class="form-group">
+                                        <g:if test="${flash.message}">
+                                            <div class="message" style="display: block">${flash.message}</div>
+                                        </g:if>
+                                        <div class="form-group">
                                         <label class="col-lg-3 control-label" for="normalInput">Nombre Completo</label>
                                         <div class="col-lg-9">
                                             <input type="text" class="form-control" name="name">
