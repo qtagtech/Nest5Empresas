@@ -37,6 +37,9 @@ class ApiController {
     }
 
     def checkSellerLogin(){
+
+
+
          println params
         def username = params.email?.trim()
         def pass = params.password?.trim()
