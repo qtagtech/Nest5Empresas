@@ -34,11 +34,11 @@ class CompanyController {
     }
 
     //only admin
-    def create() {
+    /*def create() {
 
         println "asca"
-        [companyInstance: new Company(params)/*,promoInstance: new Promo(params)*/,storeInstance: new Store(params)]
-    }
+        [companyInstance: new Company(params)*//*,promoInstance: new Promo(params)*//*,storeInstance: new Store(params)]
+    }*/
 
     //only admin
     def save() {
@@ -606,7 +606,7 @@ class CompanyController {
         if(jsonData?.status != 200){
             result = [status: jsonData?.status, message: jsonData?.message]
         }
-        result = [status: jsonData.status, elements: jsonData.payload]
+        result = [status: jsonData?.status, elements: jsonData?.payload]
         //println result
         DateTimeFormatter dtf = DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss'Z'");
         result.elements.each{
@@ -916,6 +916,8 @@ class CompanyController {
         def youarehere = "Editando Producto: "+result?.element?.fields?.name
         [user: user,picture: companyService.companyImageUrl(user),youarehere: youarehere,element: result.element,special: jsonData2?.payload?.syncId]
     }
+
+
 //    @Secured(["ROLE_COMPANY"])
     def editCombo(Long id){
         def user = springSecurityService.currentUser
@@ -1051,7 +1053,7 @@ class CompanyController {
             params.put("device_id","DdLrWE6UPLM0uYhSlUO7")
             def fields = JSON.parse(params.fields)
             params.fields = fields
-            uri.query = [row:params as JSON,sync_row_id:params.sync_row_id,company: user.id]
+            uri.query = [row:params as JSON,sync_row_id:params.sync_row_id,company: user.id, is_delete: params.isdeleting ?: false]
             headers.'User-Agent' = 'Mozilla/5.0 Ubuntu/8.10 Firefox/3.0.4'
             if(params.debug=="nest5_yes"){
                 response.setHeader("bigDataURL",uri)

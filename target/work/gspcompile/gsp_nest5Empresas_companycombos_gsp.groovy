@@ -80,20 +80,22 @@ invokeTag('formatNumber','g',94,['number':(element?.fields?.cost / (((element?.f
 printHtmlPart(22)
 expressionOut.print(createLink(controller: 'company',action: 'editCombo',params: [id: element?.syncId]))
 printHtmlPart(23)
+expressionOut.print(element?.syncId)
+printHtmlPart(24)
 i++
 }
 }
-printHtmlPart(24)
+printHtmlPart(25)
 })
 invokeTag('captureBody','sitemesh',133,[:],1)
-printHtmlPart(25)
+printHtmlPart(26)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1402794527441L
+public static final long LAST_MODIFIED = 1408035360889L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'
