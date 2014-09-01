@@ -172,6 +172,7 @@
                         <ul class="dropdown-menu">
                             <li class="menu">
                                 <ul>
+                                    <li><a href="${createLink(controller: 'company', action:'createSeller')}"><span class="icon16 icomoon-icon-user-4"></span>Agregar / Editar Vendedor</a></li>
                                     <li><a href="#" class="avatar_change"><span class="icon16 icomoon-icon-image-4"></span>Editar Imagen</a></li>
                                     <li><a href="#"><span class="icon16 icomoon-icon-user-plus"></span>Editar Perfil</a></li>
                                     %{--<li><a href="#"><span class="icon16 icomoon-icon-plus"></span>Add user</a></li>--}%
