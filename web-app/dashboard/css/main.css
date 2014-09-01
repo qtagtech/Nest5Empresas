@@ -1272,7 +1272,7 @@ select {width: 150px;}
 		background: #fff;
 		padding:0 10px;
 		margin-bottom: 0;
-		min-width: 150px;
+		min-width: 220px;
 	}
 	.dropdown-menu .menu ul {list-style:none; margin: 0;padding-left: 0;}
 	.dropdown-menu .menu li {
@@ -1329,7 +1329,9 @@ select {width: 150px;}
 	.dropdown-menu li > a {padding:5px 1px;}
 	.btn-group .dropdown-menu li > a {padding: 5px;padding-right:0; margin-right: 0; width: 100%;}
 	.btn-group .dropdown-menu li:last-child {margin-bottom: 0;}
-
+    .delete_seller {
+        margin: 0 0 0 10px;
+    }
 	.caret {
 		display: inline-block;
 		width: 0;
@@ -2000,6 +2002,16 @@ select {width: 150px;}
 			width: 100%;
 			margin-bottom: 0;
 		}
+        #create_seller {
+            margin: 10px 0 0;
+        }
+        #create_seller label {
+            text-align: left !important;
+            width: 20% !important;
+        }
+        .btn_seller {
+            margin: 0 0 0 20% !important;
+        }
 		.panel .panel-form .dropdown-menu {top:auto; left:auto; right:0;}
 		.panel .panel-form .btn-xs.dropdown-toggle {margin-top:1px;}
 		.panel .panel-form .btn span {margin-right: 0; margin-top: -8px; display: inline-block;}

@@ -206,8 +206,10 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
     '/company/tables/**':          ['ROLE_COMPANY'],
 	'/**/favicon.ico':                ['permitAll'],
     '/api/**':                ['permitAll'],
-    '/seller/**':           ['ROLE_ADMIN'],
-    '/seller/saveFromCompany/**':       ['ROLE_COMPANY']
+    '/company/createSeller/**':     ['ROLE_COMPANY'],
+    '/seller/saveFromCompany/**':     ['ROLE_COMPANY'],
+    '/seller/**':           ['ROLE_ADMIN']
+
 
 
 ]
