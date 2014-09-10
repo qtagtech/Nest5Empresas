@@ -34,11 +34,11 @@ class CompanyController {
     }
 
     //only admin
-    /*def create() {
+    def create() {
 
-        println "asca"
-        [companyInstance: new Company(params)*//*,promoInstance: new Promo(params)*//*,storeInstance: new Store(params)]
-    }*/
+
+        [companyInstance: new Company(params)]//*,promoInstance: new Promo(params)*//*,storeInstance: new Store(params)]
+    }
 
     //only admin
     def save() {
