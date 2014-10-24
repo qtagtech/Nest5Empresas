@@ -13,6 +13,8 @@ import org.joda.time.format.DateTimeFormatter
 import org.springframework.dao.DataIntegrityViolationException
 import groovyx.net.http.ContentType.*
 
+import static org.springframework.http.HttpStatus.NOT_FOUND
+
 class CompanyController {
     def springSecurityService
     def userAgentIdentService
@@ -989,6 +991,29 @@ class CompanyController {
 
 
     def createSeller() {
+        def com = springSecurityService.currentUser as Company
+        def sellers = Seller.findAllByCompany(com)
+        [sellers: sellers]
+
+    }
+    def updateSeller(Seller sellerInstance){
+      def com = springSecurityService.currentUser as Company
+      if(!sellerInstance || sellerInstance.company != com){
+            notFound()
+        }
+        [seller: sellerInstance]
+    }
+    protected void notFound() {
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'default.not.found.message', args: [message(code: 'seller.label', default: 'Seller'), params.id])
+                redirect action: "createSeller", method: "GET"
+            }
+            '*' {
+                flash.message = message(code: 'default.not.found.message', args: [message(code: 'seller.label', default: 'Seller'), params.id])
+                redirect action: "createSeller"
+            }
+        }
     }
     def saveFromCompany() {
     }

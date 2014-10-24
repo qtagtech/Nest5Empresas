@@ -64,33 +64,18 @@
                             <div class="reminder">
                                 <h4>Editar Vededores</h4>
                                 <ul>
-                                    <li class="clearfix">
-                                        <div class="icon">
-                                            <span class="icon32 icomoon-icon-user-4 red"></span>
-                                        </div>
-                                        <span class="number"></span>
-                                        <span class="txt">Julanito Perez Correa</span>
-                                        <a class="btn btn-danger delete_seller">Eliminar</a>
-                                        <a class="btn btn-info">Editar</a>
-                                    </li>
-                                    <li class="clearfix">
-                                        <div class="icon">
-                                            <span class="icon32 icomoon-icon-user-4 red"></span>
-                                        </div>
-                                        <span class="number"></span>
-                                        <span class="txt">Julanito Perez Correa</span>
-                                        <a class="btn btn-danger delete_seller">Eliminar</a>
-                                        <a class="btn btn-info">Editar</a>
-                                    </li>
-                                    <li class="clearfix">
-                                        <div class="icon">
-                                            <span class="icon32 icomoon-icon-user-4 red"></span>
-                                        </div>
-                                        <span class="number"></span>
-                                        <span class="txt">Julanito Perez Correa</span>
-                                        <a class="btn btn-danger delete_seller">Eliminar</a>
-                                        <a class="btn btn-info">Editar</a>
-                                    </li>
+                                    <g:each in="${sellers}" var="seller" status="i">
+                                        <li class="clearfix">
+                                            <div class="icon">
+                                                <span class="icon32 icomoon-icon-user-4 red"></span>
+                                            </div>
+                                            <span class="number"></span>
+                                            <span class="txt">${seller?.name}<small> (${seller?.username})</small></span>
+                                            <a href="${createLink(controller: 'seller',action:'deleteFromCompany',params: [id:seller?.id])}" class="btn btn-danger delete_seller" id="${seller?.id}">Eliminar</a>
+                                            <a  href="${createLink(controller: 'company',action:'updateSeller',params: [id:seller?.id])}" class="btn btn-info edit_seller"  id="${seller?.id}">Editar</a>
+                                        </li>
+                                    </g:each>
+
                                 </ul>
                             </div><!-- End .reminder -->
                         </div>

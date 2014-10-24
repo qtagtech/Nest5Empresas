@@ -73,7 +73,8 @@ class SellerController {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'seller.label', default: 'Vendedor creado con Éxito'), sellerInstance.id])
                 redirect (controller: 'company',action: 'createSeller')
             }
-            '*' { respond sellerInstance, [status: CREATED] }
+            '*' { flash.message = message(code: 'default.created.message', args: [message(code: 'seller.label', default: params.name+' creado con Éxito'), sellerInstance.id])
+                redirect (controller: 'company',action: 'createSeller') }
         }
     }
 
@@ -120,6 +121,68 @@ class SellerController {
                 redirect action: "index", method: "GET"
             }
             '*' { render status: NO_CONTENT }
+        }
+    }
+    @Transactional
+    def deleteFromCompany(Seller sellerInstance) {
+
+        if (sellerInstance == null) {
+            notFound()
+            return
+        }
+
+        sellerInstance.delete flush: true
+
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'default.deleted.message', args: [message(code: 'seller.label', default: 'Vendedor eliminado con éxito'), sellerInstance.id])
+                redirect (controller: 'company',action: 'createSeller')
+            }
+            '*' {
+                    flash.message = message(code: 'default.deleted.message', args: [message(code: 'seller.label', default: 'Vendedor eliminado con éxito'), sellerInstance.id])
+                    redirect (controller: 'company',action: 'createSeller')
+                }
+        }
+    }
+
+    @Transactional
+    def updateFromCompany(Seller sellerInstance) {
+        if (sellerInstance == null) {
+            notFound()
+            return
+        }
+
+        def seller = Seller.findById(params.sellerid as Long)
+        if(!seller){
+            respond null, view: '../company/updateSeller'  //cambiar al view de edicion desde compañia
+            return
+        }
+        seller.name = !((params.name) && (params.name?.trim().size() > 1) ) ?:  params.name
+        seller.identification = !((params.identification) && (params.identification?.trim().size() > 1) ) ?:  params.identification
+        seller.telephone = !((params.telephone) && (params.telephone?.trim().size() > 1) ) ?:  params.telephone
+        seller.email = !((params.email) && (params.email?.trim().size() > 1) ) ?:  params.email
+        seller.username = !((params.username) && (params.username?.trim().size() > 1) ) ?:  params.username
+        seller.password = !((params.password) && (params.password?.trim().size() > 1) ) ?:  params.password
+
+        if (seller.hasErrors()) {
+            respond seller.errors, view: '../company/updateSeller'  //cambiar al view de edicion desde compañia
+            return
+        }
+
+
+       if(!seller.save(flush: true)){
+           println seller.errors.allErrors
+       }
+
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'default.created.message', args: [message(code: 'seller.label', default: ' actualizado con éxito'), sellerInstance.id])
+                redirect (controller: 'company',action: 'createSeller')
+            }
+            '*' {
+                flash.message = message(code: 'default.created.message', args: [message(code: 'seller.label', default: ' actualizado con éxito'), sellerInstance.id])
+                redirect (controller: 'company',action: 'createSeller')
+            }
         }
     }
 

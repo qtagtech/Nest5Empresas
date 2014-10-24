@@ -207,9 +207,13 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/favicon.ico':                ['permitAll'],
     '/api/**':                ['permitAll'],
     '/company/createSeller/**':     ['ROLE_COMPANY'],
+    '/company/updateSeller/**':     ['ROLE_COMPANY'],
     '/seller/saveFromCompany/**':     ['ROLE_COMPANY'],
-    '/seller/show/**':     ['ROLE_COMPANY'],
-    '/seller/**':           ['ROLE_ADMIN']
+    '/seller/deleteFromCompany/**':     ['ROLE_COMPANY'],
+    '/seller/updateFromCompany/**':     ['ROLE_COMPANY'],
+    '/seller/**':           ['ROLE_ADMIN'],
+    '/seller/show/**':     ['ROLE_COMPANY','ROLE_ADMIN']
+
 
 
 
@@ -218,7 +222,7 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 
 
 grails.plugin.springsecurity.facebook.domain.classname='com.nest5.Nest5Client.FacebookUser'
-
+   //forzadp
 
 
 // Added by the Spring Security Core plugin:
