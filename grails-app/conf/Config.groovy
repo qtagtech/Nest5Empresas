@@ -212,7 +212,8 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
     '/seller/deleteFromCompany/**':     ['ROLE_COMPANY'],
     '/seller/updateFromCompany/**':     ['ROLE_COMPANY'],
     '/seller/**':           ['ROLE_ADMIN'],
-    '/seller/show/**':     ['ROLE_COMPANY','ROLE_ADMIN']
+    '/seller/show/**':     ['ROLE_COMPANY','ROLE_ADMIN'],
+    '/installation/**':     ['permitAll']
 
 
 
