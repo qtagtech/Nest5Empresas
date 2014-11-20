@@ -10,6 +10,16 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'linecons';
+    src:url('../fonts/linecons/linecons.eot?-kux0c3');
+    src:url('../fonts/linecons/linecons.eot?#iefix-kux0c3') format('embedded-opentype'),
+    url('../fonts/linecons/linecons.woff?-kux0c3') format('woff'),
+    url('../fonts/linecons/linecons.ttf?-kux0c3') format('truetype'),
+    url('../fonts/linecons/linecons.svg?-kux0c3#linecons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
@@ -120,6 +130,17 @@ h1 img {
     speak: none;
     -webkit-font-smoothing: antialiased;
 }
+.tooltip-helper-icon:before {
+    margin: 0 4px;
+    text-transform: none;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-family: 'codropsicons';
+    line-height: 1;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+}
 
 .nest5-icon-drop:before {
     content: "\e001";
@@ -130,6 +151,9 @@ h1 img {
 }
 
 .nest5-icon-info:before {
+    content: "\e003";
+}
+.tooltip-helper-icon:before {
     content: "\e003";
 }
 

@@ -285,6 +285,8 @@
 				classie.remove( currentFld, 'fs-hide' );
 
 				if( self.isLastStep ) {
+                    //hide stuff
+                    $(".special-info").hide();
 					// show the complete form and hide the controls
 					self._hideCtrl( self.ctrlNav );
 					self._hideCtrl( self.ctrlProgress );

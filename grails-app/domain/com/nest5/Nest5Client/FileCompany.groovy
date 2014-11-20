@@ -13,5 +13,6 @@ class FileCompany {
     }
     static mapping = {
         description type: 'text'
+        datasource 'trans'
     }
 }

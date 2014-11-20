@@ -9,4 +9,9 @@ class Country {
 
     static constraints = {
     }
+    static mapping = {
+        datasource 'trans'
+    }
 }
+
+

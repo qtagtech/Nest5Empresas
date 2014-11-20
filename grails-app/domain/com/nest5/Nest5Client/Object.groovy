@@ -12,4 +12,8 @@ class Object {
     String toString(){
         name
     }
+    static mapping = {
+        datasource 'trans'
+    }
 }
+

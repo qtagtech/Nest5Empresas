@@ -69,13 +69,14 @@ grails.project.dependency.resolution = {
 
     plugins {
         runtime ":hibernate4:4.3.5.5"
+        compile ':mongodb:3.0.1'
         runtime ":resources:1.2.8"
         build ':tomcat:7.0.53'
         compile ':cache:1.1.6'
         compile ":mail:1.0.5"
         compile ":scaffolding:2.0.3"
         runtime ":jquery:1.11.1"
-        compile ":spring-security-core:2.0-RC3"
+        compile ":spring-security-core:2.0-RC4"
         compile ":spring-security-facebook:0.15.2-CORE2"
 
 

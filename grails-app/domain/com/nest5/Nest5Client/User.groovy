@@ -85,4 +85,8 @@ class User extends SecUser {
     String toString(){
         name
     }
+    static mapping = {
+        datasource 'trans'
+    }
+
 }

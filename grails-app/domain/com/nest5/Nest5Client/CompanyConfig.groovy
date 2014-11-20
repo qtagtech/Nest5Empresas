@@ -12,4 +12,8 @@ class CompanyConfig {
     static constraints = {
         plan inList: ['STARTER','PRO','FREE']
     }
+    static mapping = {
+        datasource 'trans'
+    }
 }
+

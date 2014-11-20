@@ -22,6 +22,7 @@ class Company extends SecUser {
     static mapping = {
         invoiceMessage type: 'text'
         tipMessage type: 'text'
+        datasource 'trans'
     }
 
 

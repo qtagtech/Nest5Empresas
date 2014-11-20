@@ -11,6 +11,7 @@ class Seller extends SecUser {
     Boolean active = true
 
     static mapping = {
+        datasource 'trans'
     }
     static constraints = {
 

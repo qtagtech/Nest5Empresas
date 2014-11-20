@@ -13,4 +13,8 @@ class Family {
     String toString(){
         name
     }
+    static mapping = {
+        datasource 'trans'
+    }
 }
+

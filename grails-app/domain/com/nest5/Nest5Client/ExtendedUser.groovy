@@ -33,6 +33,7 @@ class ExtendedUser {
 
     static mapping = {
         bio type: 'text'
+        datasource 'trans'
 
     }
 }

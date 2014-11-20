@@ -43,6 +43,9 @@ class Relation {
 
     static constraints = {
     }
+    static mapping = {
+        datasource 'trans'
+    }
 }
 
 

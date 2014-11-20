@@ -8,4 +8,8 @@ class Icon {
     String description
     static constraints = {
     }
+    static mapping = {
+        datasource 'trans'
+    }
 }
+

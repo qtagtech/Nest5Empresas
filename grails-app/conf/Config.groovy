@@ -98,6 +98,7 @@ environments {
         grails.plugin.springsecurity.facebook.secret='c75f74270ce8dfdb455f05304fa68fc1'
         com.nest5.Nest5Client.bigDataServerURL = "http://hookthemapp.localhost.com:8090"
         com.nest5.Nest5Client.bigDataPath = "/Nest5BusinessData/"
+        com.nest5.BusinessData.database = "Nest5EmpresasDB"
         /*com.nest5.Nest5Client.bigDataServerURL = "http://bigdatastaging.nest5.com"
         com.nest5.Nest5Client.bigDataPath = "/"*/
     }
@@ -118,6 +119,7 @@ environments {
         grails.plugin.springsecurity.facebook.secret='513001ad6358dbb1cadedc820bd56b07'
         com.nest5.Nest5Client.bigDataServerURL = "http://bigdata.nest5.com"
         com.nest5.Nest5Client.bigDataPath = "/"
+        com.nest5.BusinessData.database = "installationInfo"
 
     }
 }

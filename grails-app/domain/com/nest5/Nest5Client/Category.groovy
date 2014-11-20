@@ -11,6 +11,7 @@ class Category {
         sort name: "asc"
         description type: 'text'
         name type: 'text'
+        datasource 'trans'
     }
 
     static constraints = {

@@ -12,4 +12,8 @@ class City {
         latitude( scale : 16 )
         longitude( scale : 16 )
     }
+
+    static mapping = {
+        datasource 'trans'
+    }
 }

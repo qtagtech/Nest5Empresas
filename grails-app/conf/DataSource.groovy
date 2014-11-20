@@ -12,7 +12,7 @@ hibernate {
 // environment specific settings
 environments {
     development {
-        dataSource {
+        dataSource_trans {
             dbCreate = "update"
             driverClassName = "org.postgresql.Driver"
             dialect = "org.hibernate.dialect.PostgreSQLDialect"
@@ -20,7 +20,20 @@ environments {
             username = "postgres"
             password = "qtagtech"
         }
+
+        /*NUEVO DATASOURCE PARA IMPLEMENTAR MONGO*/
+        grails {
+            mongo {
+                host = "localhost"
+                port = 27017
+                username = ""
+                password=""
+                databaseName = "Nest5EmpresasDB"
+            }
+        }
+
     }
+
     staging {
         dataSource {
             /*
@@ -47,7 +60,16 @@ environments {
          }
     }
     production {
-        dataSource {
+        grails {
+            mongo {
+                host = System.env.OPENSHIFT_MONGODB_DB_HOST
+                port = System.env.OPENSHIFT_MONGODB_DB_PORT
+                username = "admin"
+                password="YmIY6mDMasGt"
+                databaseName = "bigdata" //CAMBIAR
+            }
+        }
+        dataSource_trans {
             dbCreate = "update"
             driverClassName = "org.postgresql.Driver"
             dialect = "org.hibernate.dialect.PostgreSQLDialect"

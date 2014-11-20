@@ -20,6 +20,7 @@ class SecUser {
 
 	static mapping = {
 		password column: '`password`'
+        datasource 'trans'
 	}
 
 	Set<SecRole> getAuthorities() {

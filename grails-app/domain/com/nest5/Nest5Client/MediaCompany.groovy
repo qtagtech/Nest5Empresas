@@ -5,4 +5,8 @@ class MediaCompany {
     Boolean isMain
     static constraints = {
     }
+    static mapping = {
+        datasource 'trans'
+    }
 }
+

@@ -13,4 +13,8 @@ class Universe {
     String toString(){
         name
     }
+    static mapping = {
+        datasource 'trans'
+    }
+
 }
